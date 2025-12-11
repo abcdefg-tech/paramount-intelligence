@@ -9,7 +9,7 @@ export function ParamountFooter() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3">
-            <img src={logo} alt="Paramount Intelligence" className="h-8 w-auto" />
+            <img src={logo} alt="Paramount Intelligence" className="h-12 w-auto" />
             <span className="text-lg font-semibold text-foreground tracking-tight">
               Paramount Intelligence
             </span>

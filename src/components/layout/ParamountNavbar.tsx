@@ -26,11 +26,11 @@ export function ParamountNavbar() {
           : "bg-transparent"
       )}
     >
-      <div className="container mx-auto px-6 lg:px-12">
+      <div className="w-full px-6 lg:px-12">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3">
-            <img src={logo} alt="Paramount Intelligence" className="h-10 w-auto" />
+            <img src={logo} alt="Paramount Intelligence" className="h-14 w-auto" />
             <span className="text-xl font-semibold text-foreground tracking-tight">
               Paramount Intelligence
             </span>
