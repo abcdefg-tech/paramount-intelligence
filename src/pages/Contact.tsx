@@ -7,7 +7,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { useToast } from "@/hooks/use-toast";
-import { Mail, Phone, MapPin, Clock, Send, Linkedin, Loader2 } from "lucide-react";
+import { Mail, Phone, MapPin, Clock, Send, ArrowRight, Loader2 } from "lucide-react";
 
 const services = [
   "Workflow Automation",
@@ -152,7 +152,7 @@ const Contact = () => {
                         setFormData({ ...formData, name: e.target.value })
                       }
                       placeholder="Your name"
-                      className="bg-background border-border"
+                      className="bg-background border-border text-foreground"
                     />
                   </div>
                   <div>
@@ -167,7 +167,7 @@ const Contact = () => {
                         setFormData({ ...formData, email: e.target.value })
                       }
                       placeholder="your@email.com"
-                      className="bg-background border-border"
+                      className="bg-background border-border text-foreground"
                     />
                   </div>
                 </div>
@@ -182,7 +182,7 @@ const Contact = () => {
                         setFormData({ ...formData, phone: e.target.value })
                       }
                       placeholder="+1 (555) 000-0000"
-                      className="bg-background border-border"
+                      className="bg-background border-border text-foreground"
                     />
                   </div>
                   <div>
@@ -195,7 +195,7 @@ const Contact = () => {
                         setFormData({ ...formData, company: e.target.value })
                       }
                       placeholder="Your company"
-                      className="bg-background border-border"
+                      className="bg-background border-border text-foreground"
                     />
                   </div>
                 </div>
@@ -209,7 +209,7 @@ const Contact = () => {
                       setFormData({ ...formData, service: value })
                     }
                   >
-                    <SelectTrigger className="bg-background border-border">
+                    <SelectTrigger className="bg-background border-border text-foreground">
                       <SelectValue placeholder="Select a service" />
                     </SelectTrigger>
                     <SelectContent>
@@ -233,7 +233,7 @@ const Contact = () => {
                       setFormData({ ...formData, message: e.target.value })
                     }
                     placeholder="Tell us about your operational challenges..."
-                    className="bg-background border-border"
+                    className="bg-background border-border text-foreground"
                   />
                 </div>
                 <Button
@@ -324,15 +324,13 @@ const Contact = () => {
                 <h3 className="font-semibold text-foreground mb-4">
                   Follow Us
                 </h3>
-                <div className="flex gap-4">
-                  <a
-                    href="#"
-                    className="w-12 h-12 rounded-xl bg-foreground/10 flex items-center justify-center text-foreground hover:bg-foreground hover:text-background transition-all"
-                    aria-label="LinkedIn"
-                  >
-                    <Linkedin className="w-5 h-5" />
-                  </a>
-                </div>
+                <a
+                  href="#"
+                  className="flex items-center justify-between px-6 py-4 rounded-xl bg-foreground/10 text-foreground hover:bg-foreground hover:text-background transition-all group"
+                >
+                  <span className="text-lg font-medium">LinkedIn</span>
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </a>
               </div>
             </div>
           </div>
