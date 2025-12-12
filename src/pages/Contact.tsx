@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+
 import { useToast } from "@/hooks/use-toast";
 import { Mail, Phone, MapPin, Clock, Send, ArrowRight, Loader2 } from "lucide-react";
 
@@ -20,28 +20,6 @@ const services = [
   "Strategic Consulting"
 ];
 
-const faqs = [
-  {
-    question: "How long does a typical automation project take?",
-    answer: "Project timelines vary based on complexity. A proof-of-concept can take 2-4 weeks, while full enterprise deployments typically range from 2-6 months. We provide detailed timelines during our discovery phase."
-  },
-  {
-    question: "What is your pricing model?",
-    answer: "Our primary model involves a discovery retainer followed by a variable success fee tied to efficiency gains. We align our incentives with your operational success."
-  },
-  {
-    question: "What kind of processes can you automate?",
-    answer: "We automate data processing, customer support triage, internal ticketing, report generation, compliance monitoring, and virtually any repetitive software task that currently requires human intervention."
-  },
-  {
-    question: "Do you provide ongoing support?",
-    answer: "Yes, we provide ongoing monitoring, optimization, and management of your AI workforce. We ensure 99.9% uptime, handle exception cases, and continuously tune agents for peak performance."
-  },
-  {
-    question: "Can you integrate with our existing systems?",
-    answer: "Absolutely. We specialize in seamless integration with existing enterprise systems, databases, and workflows. Our solutions are designed to complement and enhance your current infrastructure."
-  }
-];
 
 const Contact = () => {
   const { toast } = useToast();
@@ -333,38 +311,6 @@ const Contact = () => {
                 </a>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-6 lg:px-12">
-          <div className="text-center mb-12">
-            <p className="text-sm uppercase tracking-widest text-muted-foreground mb-4">
-              FAQ
-            </p>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-              Frequently Asked Questions
-            </h2>
-          </div>
-          <div className="max-w-3xl mx-auto">
-            <Accordion type="single" collapsible className="space-y-4">
-              {faqs.map((faq, index) => (
-                <AccordionItem
-                  key={index}
-                  value={`faq-${index}`}
-                  className="border border-border rounded-xl px-6 bg-card"
-                >
-                  <AccordionTrigger className="text-foreground hover:text-muted-foreground text-left">
-                    {faq.question}
-                  </AccordionTrigger>
-                  <AccordionContent className="text-muted-foreground">
-                    {faq.answer}
-                  </AccordionContent>
-                </AccordionItem>
-              ))}
-            </Accordion>
           </div>
         </div>
       </section>
