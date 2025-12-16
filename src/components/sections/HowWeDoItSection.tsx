@@ -1,4 +1,4 @@
-import { Zap, Shield, Settings } from "lucide-react";
+import networkPattern from "@/assets/network-pattern.jpg";
 
 export function HowWeDoItSection() {
   return (
@@ -9,34 +9,19 @@ export function HowWeDoItSection() {
             How we do it
           </p>
 
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-stretch">
             {/* Left Column - Headline and Image */}
-            <div className="space-y-8">
+            <div className="flex flex-col space-y-8">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight">
                 Speed. Reliability. Control.
               </h2>
               
-              <div className="bg-card border border-border rounded-2xl p-8 lg:p-12">
-                <div className="grid grid-cols-3 gap-6">
-                  <div className="flex flex-col items-center text-center space-y-3">
-                    <div className="w-16 h-16 rounded-xl bg-primary/10 flex items-center justify-center">
-                      <Zap className="w-8 h-8 text-primary" />
-                    </div>
-                    <span className="text-sm font-medium text-foreground">Speed</span>
-                  </div>
-                  <div className="flex flex-col items-center text-center space-y-3">
-                    <div className="w-16 h-16 rounded-xl bg-primary/10 flex items-center justify-center">
-                      <Shield className="w-8 h-8 text-primary" />
-                    </div>
-                    <span className="text-sm font-medium text-foreground">Reliability</span>
-                  </div>
-                  <div className="flex flex-col items-center text-center space-y-3">
-                    <div className="w-16 h-16 rounded-xl bg-primary/10 flex items-center justify-center">
-                      <Settings className="w-8 h-8 text-primary" />
-                    </div>
-                    <span className="text-sm font-medium text-foreground">Control</span>
-                  </div>
-                </div>
+              <div className="flex-1 rounded-2xl overflow-hidden border border-border">
+                <img 
+                  src={networkPattern} 
+                  alt="Network connectivity pattern" 
+                  className="w-full h-full object-cover opacity-80"
+                />
               </div>
             </div>
 
