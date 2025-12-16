@@ -5,6 +5,7 @@ import { HowWeDoItSection } from "@/components/sections/HowWeDoItSection";
 import { EcosystemSection } from "@/components/sections/EcosystemSection";
 import { BestOfAISection } from "@/components/sections/BestOfAISection";
 import { ServicesSection } from "@/components/sections/ServicesSection";
+import { CaseStudiesSection } from "@/components/sections/CaseStudiesSection";
 import { InvestedSection } from "@/components/sections/InvestedSection";
 import { ParamountFooter } from "@/components/layout/ParamountFooter";
 
@@ -19,6 +20,9 @@ const Index = () => {
         <EcosystemSection />
         <BestOfAISection />
         <ServicesSection />
+        <section id="case-studies">
+          <CaseStudiesSection />
+        </section>
         <InvestedSection />
       </main>
       <ParamountFooter />
